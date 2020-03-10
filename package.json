@@ -1,0 +1,26 @@
+{
+  "name": "case-counter",
+  "version": "1.0.0",
+  "description": "Case metrics monitor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikedehart/case-counter.git"
+  },
+  "keywords": [
+    "incident",
+    "case",
+    "nodejs",
+    "graph",
+    "react"
+  ],
+  "author": "Mike DeHart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikedehart/case-counter/issues"
+  },
+  "homepage": "https://github.com/mikedehart/case-counter#readme"
+}
