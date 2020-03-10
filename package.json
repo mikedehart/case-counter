@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/mikedehart/case-counter/issues"
   },
-  "homepage": "https://github.com/mikedehart/case-counter#readme"
+  "homepage": "https://github.com/mikedehart/case-counter#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15"
+  }
 }
