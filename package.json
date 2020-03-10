@@ -4,7 +4,9 @@
   "description": "Case metrics monitor",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node index.js",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -25,10 +27,12 @@
   "homepage": "https://github.com/mikedehart/case-counter#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "colors": "^1.4.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "lodash": "^4.17.15",
     "method-override": "^3.0.0",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "node-sybase": "^1.1.8"
   }
 }

@@ -7,33 +7,37 @@ const express = require('express');
 
 // Locals
 const config = require('./conf/conf');
-const logger = require('./util/logger');
+
+// Routes
+const api = require('./api/api');
 
 // Main app
 const app = express();
 
 // Connect to database
-require('mongoose').connect(config.db.url, config.db.options, function(err) {
-	if(err) {
-		logger.error(err);
-	}
-});
+// require('mongoose').connect(config.db.url, config.db.options, function(err) {
+// 	if(err) {
+// 		console.error(err);
+// 	}
+// });
 
 // set up app middleware
 require('./util/middleware')(app);
 
 // Routes
+app.use('/api', api);
+
 
 
 // Final error handling
 app.use(function(err, req, res, next) {
 	if(err.name === 'UnauthorizedError') {
-		logger.error(err.stack);
+		console.error(err.stack);
 		res.status(401).send('Invalid token sent!');
 		return;
 	} else {
-		logger.error(err.stack);
-		res.status(500).send(err);
+		console.error(err.stack);
+		res.status(500).send(err.stack);
 		return;
 	}
 });
