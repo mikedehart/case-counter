@@ -62,4 +62,4 @@ typings/
 
 
 # Ignore conf files
-src/conf/conf.js
+src/conf/*
